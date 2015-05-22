@@ -5,7 +5,6 @@
 // default - Default panel
 // .Panel--alternative - Alternate panel
 // .Panel--action - A panel with a CTA
-// .Panel--home - A panel with a background to be used in the homepage
 //
 // markup:
 // <div class="Panel {$modifiers}"></div>
@@ -25,14 +24,10 @@
   background-color: $Theme-color-polar;
 }
 
-.Panel--alternative {
+.Panel.Panel--alternative {
   background-color: $Theme-color-white;
 }
 
-.Panel--action {
+.Panel.Panel--action {
   background-color: $Theme-color-horizon;
-}
-
-.Panel--home {
-  background-image: image-url('homepage-hero.png');
 }
