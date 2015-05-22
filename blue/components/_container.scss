@@ -16,10 +16,6 @@
 //   <div class="Container-column">Content 1</div>
 //   <div class="Container-column">Content 2</div>
 // </div>
-// <div class="Container Container--twoColumn">
-//   <div class="Container-column Container-column--main">Content 1</div>
-//   <div class="Container-column Container-column--secondary">Content 2</div>
-// </div>
 //
 // Styleguide 1.7
 
@@ -32,13 +28,4 @@
 
 .Container.Container--twoColumn {
   @include container(2);
-}
-
-.Container,
-.Container.Container--twoColumn {
-  .Container-column--centered {
-    align-items: center;
-
-    text-align: center;
-  }
 }

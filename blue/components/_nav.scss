@@ -13,7 +13,10 @@
 //   <ul class="Nav-items">
 //     <li class="Nav-item"></li>
 //     <li class="Nav-item">
-//       <a class="Nav-link" href="#work">Work</a>
+//       <a class="Nav-link" href="#">Work</a>
+//     </li>
+//     <li class="Nav-item is-selected">
+//       <a class="Nav-link" href="#">Company</a>
 //     </li>
 //   </ul>
 // </nav>
@@ -61,7 +64,8 @@ $Nav-item-color-hover: $Theme-color-yellowOrange;
     margin-left: $Theme-spacing-default;
   }
 
-  &:hover {
+  &:hover,
+  &.is-selected {
     border-bottom: 5px solid $Nav-item-color-hover;
 
     .Nav-link {
@@ -88,7 +92,8 @@ $Nav-item-color-hover: $Theme-color-yellowOrange;
     }
   }
 
-  .Nav-item:hover {
+  .Nav-item:hover,
+  .Nav-item.is-selected {
     .Nav-link {
       color: $Nav-item-color-hover;
     }

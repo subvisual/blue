@@ -3,6 +3,9 @@
 // Styles body text's font and color properties.
 //
 // default - Most commonly used text
+// .Text--engagement - Text to engage with the end-user
+// .Text--tag - Text that represents some sort of tag
+// .Text--light - Text with a light color
 //
 // markup:
 // <div class="Text {$modifiers}">
@@ -26,4 +29,15 @@
   color: $Theme-color-white;
 
   font-weight: $Theme-typography-fontWeight-bold;
+}
+
+.Text.Text--tag {
+  @include font-properties(subvisual, small);
+  color: $Theme-color-brightTurquoise;
+
+  text-transform: uppercase;
+}
+
+.Text.Text--light {
+  color: $Theme-color-white;
 }
