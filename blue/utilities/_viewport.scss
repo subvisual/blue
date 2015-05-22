@@ -1,0 +1,11 @@
+.u-onlySmall {
+  @include media(">tablet") {
+    display: none;
+  }
+}
+
+.u-exceptSmall {
+  @include media("<=tablet") {
+    display: none;
+  }
+}
