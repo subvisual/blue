@@ -31,10 +31,12 @@
 }
 
 .Container.Container--twoColumn {
-  @include container(2) {
-    .Container-column--centered {
-      align-items: center;
-    }
-  }
+  @include container(2);
 }
 
+.Container,
+.Container.Container--twoColumn {
+  .Container-column--centered {
+    align-items: center;
+  }
+}

@@ -4,12 +4,19 @@
 // Shows only the first item and aligns it to the right when on a mobile resolution.
 // Lays out every element except the first (which is hidden) from right to left with equal spacing when on a desktop resolution.
 //
+// default - Nav with a transparent background
+// .Nav--filled - Nav with a filled background
+// .Nav--dark - Uses a darker color in the nav links
+//
 // markup:
-// <div class="Nav">
-//   <div class="Nav-item">Mobile item</div>
-//   <div class="Nav-item">Desktop Item 1</div>
-//   <div class="Nav-item">Desktop Item 2</div>
-// </div>
+// <nav aria-label="Main navigation" class="Nav {$modifiers}">
+//   <ul class="Nav-items">
+//     <li class="Nav-item"></li>
+//     <li class="Nav-item">
+//       <a class="Nav-link" href="#work">Work</a>
+//     </li>
+//   </ul>
+// </nav>
 //
 // Styleguide 1.9
 
@@ -23,6 +30,12 @@ $Nav-item-color-hover: $Theme-color-yellowOrange;
   padding: 0 $Theme-spacing-small;
 
   background: transparent;
+
+  transition: background 0.2s ease-in-out;
+}
+
+.Nav.Nav--filled {
+  background: $Theme-color-white;
 }
 
 .Nav-items {
@@ -34,7 +47,7 @@ $Nav-item-color-hover: $Theme-color-yellowOrange;
   display: flex;
   align-items: center;
 
-  padding: $Theme-spacing-small 0;
+  padding: $Theme-spacing-small 0 $Theme-spacing-xSmall;
 
   border-bottom: 5px solid transparent;
   cursor: pointer;
@@ -56,13 +69,28 @@ $Nav-item-color-hover: $Theme-color-yellowOrange;
 }
 
 .Nav-link {
-  @include font-properties(heading, small);
-  color: $Theme-color-white;
+  @include font-properties(subvisual, small);
+  color: $Theme-color-poloBlue;
 
   font-weight: $Theme-typography-fontWeight-bold;
   text-decoration: none;
+  text-transform: uppercase;
 
   transition: color 0.2s ease-in-out;
+}
+
+.Nav.Nav--dark {
+  &:not(.Nav--filled) {
+    .Nav-link {
+      color: $Theme-color-white;
+    }
+  }
+
+  .Nav-item:hover {
+    .Nav-link {
+      color: $Nav-item-color-hover;
+    }
+  }
 }
 
 @include media('>=tablet') {

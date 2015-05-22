@@ -10,6 +10,7 @@
 // <div class="Heading {$modifiers}">
 //   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 //   Lorem <span class="Heading-highlight">Ipsum</heading> is simply dummy text of the printing and typesetting industry.
+//   Lorem <span class="Heading-light">Ipsum</heading> is simply dummy text of the printing and typesetting industry.
 // </div>
 //
 // Styleguide 1.5
@@ -28,6 +29,10 @@
 
 .Heading-highlight {
   color: $Theme-color-brightTurquoise;
+}
+
+.Heading-light {
+  color: $Theme-color-white;
 }
 
 .Heading.Heading--small {

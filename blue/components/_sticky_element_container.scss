@@ -2,9 +2,6 @@
 //
 // Fixes an element to the top of the container. Hides it downwards and shows it upwards.
 //
-// default - Shows the element
-// .is-hidden - Hides the element
-//
 // markup:
 // <div class="StickyElementContainer styleguide-grid-unit" style="height: 100px;">
 //   <div class="StickyElementContainer-element styleguide-grid-unit" style="height: 50px;">Bruno</div>
@@ -18,6 +15,7 @@
 .StickyElementContainer-element {
   position: fixed;
   top: 0;
+  z-index: $Theme-layer-stickyElement;
 
   width: 100%;
 
