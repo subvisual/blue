@@ -5,6 +5,7 @@
 // default - Most commonly used heading
 // .Heading--small - Smaller font
 // .Heading--large - Larger font
+// .Heading--uvp - To be used as a sub heading in the UVP section
 //
 // markup:
 // <div class="Heading {$modifiers}">
@@ -25,6 +26,12 @@
   color: $Theme-color-horizon;
 
   font-weight: $Theme-typography-fontWeight-bold;
+}
+
+.Heading.Heading--uvp {
+  color: $Theme-color-white;
+
+  font-weight: $Theme-typography-fontWeight-regular;
 }
 
 .Heading-highlight {

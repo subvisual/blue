@@ -27,6 +27,7 @@ $Nav-item-color-hover: $Theme-color-yellowOrange;
 
 .Nav {
   width: 100%;
+  height: $Theme-nav-height;
   padding: 0 $Theme-spacing-small;
 
   background: transparent;
@@ -36,6 +37,7 @@ $Nav-item-color-hover: $Theme-color-yellowOrange;
 
 .Nav.Nav--filled {
   background: $Theme-color-white;
+  box-shadow: inset 0 -4px rgba(230, 230, 230, 0.4);
 }
 
 .Nav-items {

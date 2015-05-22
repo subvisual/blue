@@ -158,6 +158,12 @@ $Theme-nav-height: 80px;
     padding: 0 $halfGutterSize;
   }
 
+  @include media('>=tablet') {
+    .#{$columnClass} {
+      flex: 0 0 auto;
+    }
+  }
+
   @if($numberOfColumns > 1) {
     .#{$columnClass} + .#{$columnClass} {
       margin-top: $Theme-spacing-default;
@@ -173,6 +179,10 @@ $Theme-nav-height: 80px;
         margin-top: 0;
       }
 
+    }
+  } @else {
+    .#{$columnClass} {
+      max-width: 600px;
     }
   }
 

@@ -23,6 +23,10 @@
   padding-bottom: $Theme-spacing-large;
 }
 
+.Layout-doubleLargeMargin {
+  padding-bottom: $Theme-spacing-large * 2;
+}
+
 .Layout-navPlaceholder {
   padding-bottom: $Theme-nav-height;
 }
