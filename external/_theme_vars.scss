@@ -172,6 +172,11 @@ $Theme-font-sizes: (
   @content
 }
 
+// right-arrow()
+//
+// Adds the arrow pointing right icon.
+//
+// Styleguide 2.2
 @mixin right-arrow() {
   @include fa-icon();
 
