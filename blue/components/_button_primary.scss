@@ -2,14 +2,21 @@
 //
 // Button element that represents a primary action in the application.
 //
-// default - The default primary button
-// .ButtonPrimary--inverted - Same button with a different color supposed to be
-// used when the background issues it
+// Styleguide 1.2
+
+// ButtonPrimary
+//
+// The default button
+//
+// default - Normal state
+// :hover - Hover
+// :active - Active
+// :visited - Visited
 //
 // markup:
 // <div class="ButtonPrimary {$modifiers}">Some text</div>
 //
-// Styleguide 1.2
+// Styleguide 1.2.1
 
 @import '../reset';
 @import '../theme_vars';
@@ -32,6 +39,7 @@ $ButtonPrimary-inverted-hover: darken($ButtonPrimary-inverted-background, 10);
   background-color: $ButtonPrimary-default-background;
   border: 4px solid $ButtonPrimary-default-background;
   color: $ButtonPrimary-default-color;
+  cursor: pointer;
 
   font-weight: $Theme-typography-fontWeight-bold;
   text-decoration: none;
@@ -45,6 +53,21 @@ $ButtonPrimary-inverted-hover: darken($ButtonPrimary-inverted-background, 10);
     color: $ButtonPrimary-default-color;
   }
 }
+
+// ButtonPrimary.ButtonPrimary--inverted
+//
+// A modifier of the default button.<br>
+// Has different color. Supposed to be used when the background issues it.
+//
+// default - Normal state
+// :hover - Hover
+// :active - Active
+// :visited - Visited
+//
+// markup:
+// <div class="ButtonPrimary ButtonPrimary--inverted {$modifiers}">Some text</div>
+//
+// Styleguide 1.2.2
 
 .ButtonPrimary.ButtonPrimary--inverted {
   background-color: $ButtonPrimary-inverted-background;

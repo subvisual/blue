@@ -9,10 +9,8 @@
 // .Heading--uvp - To be used as a sub heading in the UVP section
 //
 // markup:
-// <div class="Heading {$modifiers}">
-//   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-//   Lorem <span class="Heading-highlight">Ipsum</heading> is simply dummy text of the printing and typesetting industry.
-//   Lorem <span class="Heading-light">Ipsum</heading> is simply dummy text of the printing and typesetting industry.
+// <div class="Heading {$modifiers} styleguide-grid-unit">
+//   Lorem Ipsum <span class="Heading-highlight">is simply dummy text</span> of the printing and <span class="Heading-light">typesetting industry</span>.
 // </div>
 //
 // Styleguide 1.5

@@ -21,7 +21,13 @@
 //   </ul>
 // </nav>
 //
-// Styleguide 1.9
+// sg-wrapper:
+// <div style="background-color: rgba(0,0,0,0.1); height: 300px;">
+//   <sg-wrapper-content/>
+//   <div style="background-color: rgba(0,0,0,0.2); height: 400px;"></div>
+// </div>
+//
+// Styleguide 1.12
 
 @import '../reset';
 @import '../theme_vars';

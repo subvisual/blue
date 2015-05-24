@@ -2,28 +2,29 @@
 //
 // The site's sitemap
 //
-// default - The sitemap with four columns
-//
 // markup:
 // <div class="Sitemap">
 //   <div class="Sitemap-topic">
 //     <h1 class="Sitemap-heading">Topic Title</h1>
-//     <ul>
+//     <ul class="Sitemap-links">
 //       <li>Item</li>
 //     </ul>
 //   </div>
-//   &hellip;
+//   <div class="Sitemap-topic">
+//     <h1 class="Sitemap-heading">Topic Title</h1>
+//     <ul class="Sitemap-links">
+//       <li>Item</li>
+//     </ul>
+//   </div>
 // </div>
 //
-// Styleguide 1.11
+// Styleguide 1.13
 
 @import '../reset';
 @import '../theme_vars';
 
 .Sitemap {
   @include container(4, 'Sitemap-topic') {
-    margin-bottom: $Theme-spacing-large;
-
     .Sitemap-topic {
       align-items: flex-start;
     }
@@ -36,4 +37,10 @@
 
   font-weight: $Theme-typography-fontWeight-bold;
   text-transform: uppercase;
+}
+
+.Sitemap-links {
+  @include font-properties(bodyText, small);
+
+  margin-top: $Theme-spacing-xSmall;
 }

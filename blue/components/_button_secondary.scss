@@ -3,11 +3,8 @@
 // Button element that represents a secondary action in the application.
 // A button with a transparent background.
 //
-// default - The default secondary button
-// .ButtonSecondary--inverted - Same button with a different color supposed to be used when the background issues it
-//
 // markup:
-// <div class="ButtonSecondary {$modifiers}">Some text</div>
+// <div class="ButtonSecondary">Some text</div>
 //
 // Styleguide 1.3
 
@@ -17,9 +14,6 @@
 $ButtonSecondary-default-background: transparent;
 $ButtonSecondary-default-color: $Theme-color-yellowOrange;
 $ButtonSecondary-default-hover: $Theme-color-white;
-$ButtonSecondary-inverted-background: transparent;
-$ButtonSecondary-inverted-color: $Theme-color-white;
-$ButtonSecondary-inverted-hover: $Theme-color-brightTurquoise;
 
 .ButtonSecondary {
   @include font-properties(subvisual, small);
@@ -32,26 +26,16 @@ $ButtonSecondary-inverted-hover: $Theme-color-brightTurquoise;
   background-color: $ButtonSecondary-default-background;
   border: 4px solid $ButtonSecondary-default-color;
   color: $ButtonSecondary-default-color;
+  cursor: pointer;
 
   font-weight: $Theme-typography-fontWeight-bold;
   text-decoration: none;
+  text-transform: uppercase;
 
   transition: all 0.3s ease-in-out;
 
   &:hover {
     background-color: $ButtonSecondary-default-color;
     color: $ButtonSecondary-default-hover;
-  }
-}
-
-.ButtonSecondary.ButtonSecondary--inverted {
-  background-color: $ButtonSecondary-inverted-background;
-  border-color: $ButtonSecondary-inverted-color;
-  color: $ButtonSecondary-inverted-color;
-
-  &:hover {
-    background-color: $ButtonSecondary-inverted-color;
-    border-color: $ButtonSecondary-inverted-color;
-    color: $ButtonSecondary-inverted-hover;
   }
 }

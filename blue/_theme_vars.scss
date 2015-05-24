@@ -1,12 +1,22 @@
-// Theme
-//
-// Theme variables, functions and mixins only.
-// No rule definitions in here.
-//
-// Styleguide 1
-
 // Points of reassembly
 @import 'include-media/dist/include-media';
+
+// Colors
+//
+// This section describes the brand colors
+//
+// $Theme-color-brightTurquoise - Used for
+// $Theme-color-horizon - Used for
+// $Theme-color-limedSpruce - Used for
+// $Theme-color-polar - Used for
+// $Theme-color-poloBlue - Used for
+// $Theme-color-white - Used for
+// $Theme-color-yellowOrange - Used for
+//
+// markup:
+// <div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+//
+// Styleguide 2
 
 // Brand Colors
 $Theme-color-brightTurquoise: #0dc0f2;
@@ -17,6 +27,7 @@ $Theme-color-poloBlue: #8db6cb;
 $Theme-color-white: #fff;
 $Theme-color-yellowOrange: #fab23c;
 
+// styleguide:ignore:start
 // Color Usage
 $Theme-palette-text-body-default: $Theme-color-poloBlue;
 
@@ -34,6 +45,28 @@ $Theme-layer-overlay: 6;
 $Theme-typography-fontWeight-bold: 700;
 $Theme-typography-fontWeight-medium: 500;
 $Theme-typography-fontWeight-regular: 400;
+
+// Components variables
+$Theme-nav-height: 80px;
+// styleguide:ignore:end
+
+// Theme mixins
+//
+// Theme variables, functions and mixins only.
+// No rule definitions in here.
+//
+// Styleguide 3
+
+// font-properties()
+//
+// Applies the requested **font-family**, **font-size** and **line-height** properties.<br>
+// Applies any exisiting media query rules as well.
+//
+// $family - Defines the font-family to be fetched
+// $size - Defines the size of the font to be fetched
+//
+// Styleguide 3.1
+
 $Theme-font-families: (
   subvisual: ('futura-pt', sans-serif),
   heading: ('merriweather', serif),
@@ -67,6 +100,10 @@ $Theme-font-sizes: (
       )
     ),
     bodyText: (
+      small: (
+        font-size: 16px,
+        line-height: 28px
+      ),
       base: (
         font-size: 20px,
         line-height: 32px
@@ -103,6 +140,10 @@ $Theme-font-sizes: (
       )
     ),
     bodyText: (
+      small: (
+        font-size: 16px,
+        line-height: 28px
+      ),
       base: (
         font-size: 20px,
         line-height: 32px
@@ -115,10 +156,6 @@ $Theme-font-sizes: (
   )
 );
 
-// Components variables
-$Theme-nav-height: 80px;
-
-// font-size and line-height styles
 @mixin font-properties($family, $size: 'base') {
   font-family: map-get($Theme-font-families, $family);
   font-size: map-get(map-get(map-get(map-get($Theme-font-sizes, 'mobile'), $family), $size), 'font-size');
@@ -130,7 +167,7 @@ $Theme-nav-height: 80px;
   }
 }
 
-// container($numberOfColumns: 1, $columnClass: 'Container-column', $halfGutterSize: $Theme-spacing-small)
+// container()
 //
 // Creates a container with a variable number of columns and gutter size, using flex boxes for layout
 //
@@ -138,7 +175,7 @@ $Theme-nav-height: 80px;
 // $columnClass - You can specify the class name for a column, so you can be more semantic
 // $halfGutterSize - It's half the size of the gutter you want
 //
-// Styleguide 2.1
+// Styleguide 3.2
 @mixin container($numberOfColumns: 1, $columnClass: 'Container-column', $halfGutterSize: $Theme-spacing-small) {
   display: flex;
   flex-wrap: wrap;
@@ -193,7 +230,7 @@ $Theme-nav-height: 80px;
 //
 // Adds the arrow pointing right icon.
 //
-// Styleguide 2.2
+// Styleguide 3.3
 @mixin right-arrow() {
   @include fa-icon();
 
