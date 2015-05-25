@@ -55,4 +55,8 @@ $imported-modules: () !default;
     background: none;
     border: 0;
   }
+
+  object {
+    pointer-events: none;
+  }
 }

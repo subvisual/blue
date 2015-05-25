@@ -10,6 +10,7 @@
 //
 // markup:
 // <nav aria-label="Main navigation" class="Nav {$modifiers}">
+//   <div class="Nav-logo">Logo</div>
 //   <ul class="Nav-items">
 //     <li class="Nav-item"></li>
 //     <li class="Nav-item">
@@ -35,9 +36,12 @@
 $Nav-item-color-hover: $Theme-color-yellowOrange;
 
 .Nav {
+  display: flex;
+  justify-content: space-between;
+
   width: 100%;
   height: $Theme-nav-height;
-  padding: 0 $Theme-spacing-small;
+  padding: 0 $Theme-spacing-default;
 
   background: transparent;
 
@@ -46,7 +50,15 @@ $Nav-item-color-hover: $Theme-color-yellowOrange;
 
 .Nav.Nav--filled {
   background: $Theme-color-white;
-  box-shadow: inset 0 -4px rgba(230, 230, 230, 0.4);
+  box-shadow: 0 4px 11px rgba(230, 230, 230, 0.4);
+}
+
+.Nav-logo {
+  display: flex;
+
+  &.is-hidden {
+    display: none;
+  }
 }
 
 .Nav-items {
@@ -58,8 +70,7 @@ $Nav-item-color-hover: $Theme-color-yellowOrange;
   display: flex;
   align-items: center;
 
-  padding: $Theme-spacing-small 0 $Theme-spacing-xSmall;
-
+  border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
   cursor: pointer;
 

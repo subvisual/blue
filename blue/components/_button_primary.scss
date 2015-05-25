@@ -38,6 +38,7 @@ $ButtonPrimary-inverted-hover: darken($ButtonPrimary-inverted-background, 10);
 
   background-color: $ButtonPrimary-default-background;
   border: 4px solid $ButtonPrimary-default-background;
+  box-shadow: 0 4px 0 rgba(230, 230, 230, 0.4);
   color: $ButtonPrimary-default-color;
   cursor: pointer;
 
