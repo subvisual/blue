@@ -1,5 +1,7 @@
 $(function() {
   let didScroll;
+  let lastScrollTop = 0;
+  let currentScrollTop;
 
   function checkScroll() {
     didScroll = true;
@@ -7,8 +9,10 @@ $(function() {
 
   setInterval(function() {
     if (didScroll) {
-      window.subvisual.stickyElement.manageVisibility();
-      window.subvisual.nav.manageBackground();
+      currentScrollTop = $(document).scrollTop();
+      window.subvisual.nav.update(currentScrollTop, lastScrollTop);
+      lastScrollTop = currentScrollTop;
+
       didScroll = false;
     }
   }, 250);
