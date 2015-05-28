@@ -7,7 +7,7 @@ Subvisual's UI Kit.
 Create the submodule's directory:
 
 ```bash
-$ git submodule add git@github.com:groupbuddies/blue.git
+$ git submodule add git@github.com:groupbuddies/blue.git vendor/blue
 ```
 
 Add the submodule to sprockets (optional):
@@ -17,9 +17,7 @@ Add the submodule to sprockets (optional):
 ```ruby
 # config.rb
 after_configuration do
-  if File.exist? "blue"
-    sprockets.append_path File.join "#{root}", "blue"
-  end
+  sprockets.append_path File.join "#{root}", "vendor"
 end
 ```
 
