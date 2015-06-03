@@ -59,7 +59,7 @@
 }
 
 .HorizontalGrid.HorizontalGrid--limited {
-  max-width: 1280px;
+  max-width: $Theme-grid-maxWidth;
   margin: 0 auto;
 }
 
