@@ -4,6 +4,7 @@
 // A button with a transparent background.
 //
 // default - Normal state
+// .ButtonSecondary--fullWidth - A button that takes the whole width of its parent
 // :hover - Hover
 // :active - Active
 // :visited - Visited
@@ -42,7 +43,11 @@ $ButtonSecondary-default-hover: $Theme-color-white;
 
   &:hover {
     background-color: $ButtonSecondary-default-color;
-    box-shadow: 0px 4px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
     color: $ButtonSecondary-default-hover;
   }
+}
+
+.ButtonSecondary.ButtonSecondary--fullWidth {
+  width: 100%;
 }
