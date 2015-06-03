@@ -27,12 +27,14 @@
   padding: 0 $Theme-spacing-default;
 }
 
-.GridCell.GridCell--alignCenter {
-  justify-content: center;
-}
+@include media('>=tablet') {
+  .GridCell.GridCell--alignCenter {
+    justify-content: center;
+  }
 
-.GridCell.GridCell--alignRight {
-  justify-content: flex-end;
+  .GridCell.GridCell--alignRight {
+    justify-content: flex-end;
+  }
 }
 
 .GridCell-content {
