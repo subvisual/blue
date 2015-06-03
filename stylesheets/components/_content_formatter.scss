@@ -5,6 +5,7 @@
 // default - Aligns the text to the left
 // .ContentFormatter--centerHorizontally - Content is always centered horizontally
 // .ContentFormatter--center - Content is always centered horizontally and vertically
+// .ContentFormatter--right - Aligns text to the right
 //
 // markup:
 // <div class="ContentFormatter {$modifiers}" style="height: 200px;">
@@ -31,4 +32,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.ContentFormatter.ContentFormatter--right {
+  text-align: right;
 }
