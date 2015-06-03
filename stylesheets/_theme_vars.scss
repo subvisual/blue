@@ -6,10 +6,14 @@
 // This section describes the brand colors
 //
 // $Theme-color-brightTurquoise - Used for
+// $Theme-color-caribbeanGreen - Used for
+// $Theme-color-cerulean - Used for
 // $Theme-color-horizon - Used for
 // $Theme-color-limedSpruce - Used for
+// $Theme-color-ming - Used for
 // $Theme-color-polar - Used for
 // $Theme-color-poloBlue - Used for
+// $Theme-color-tulipTree - Used for
 // $Theme-color-white - Used for
 // $Theme-color-yellowOrange - Used for
 //
@@ -20,10 +24,14 @@
 
 // Brand Colors
 $Theme-color-brightTurquoise: #0dc0f2;
+$Theme-color-caribbeanGreen: #00c2b6;
+$Theme-color-cerulean: #00a5d4;
 $Theme-color-horizon: #5889a2;
 $Theme-color-limedSpruce: #2f3d45;
+$Theme-color-ming: #3b6e87;
 $Theme-color-polar: #ebf5fa;
 $Theme-color-poloBlue: #8db6cb;
+$Theme-color-tulipTree: #efaa37;
 $Theme-color-white: #fff;
 $Theme-color-yellowOrange: #fab23c;
 
@@ -37,8 +45,15 @@ $Theme-spacing-large: 100px;
 $Theme-spacing-small: 25px;
 $Theme-spacing-xSmall: 10px;
 
-// Grid
 $Theme-grid-maxWidth: 1280px;
+
+// Tags
+$Theme-tags-color: (
+  design: $Theme-color-caribbeanGreen,
+  development: $Theme-color-cerulean,
+  general: $Theme-color-ming,
+  community: $Theme-color-tulipTree
+);
 
 // Layers
 $Theme-layer-stickyElement: 5;
