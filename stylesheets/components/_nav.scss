@@ -40,6 +40,8 @@
 $Nav-item-color-hover: $Theme-color-yellowOrange;
 
 .Nav {
+  z-index: 1;
+
   display: flex;
   justify-content: space-between;
 
