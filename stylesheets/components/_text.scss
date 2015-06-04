@@ -7,6 +7,7 @@
 // .Text--extraInfo - Text that stands out, but not as much as the engagement
 // .Text--tag - Text that represents some sort of tag
 // .Text--light - Text with a light color
+// .Text--strong - Text with a strong emphasis
 //
 // markup:
 // <div class="Text {$modifiers} styleguide-grid-unit">
@@ -52,4 +53,8 @@
 
 .Text.Text--light {
   color: $Theme-color-white;
+}
+
+.Text.Text--strong {
+  font-weight: $Theme-typography-fontWeight-bold;
 }
