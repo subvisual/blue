@@ -60,7 +60,8 @@
 
 .HorizontalGrid.HorizontalGrid--limited {
   max-width: $Theme-grid-maxWidth;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .HorizontalGrid.HorizontalGrid--lightFrame {
