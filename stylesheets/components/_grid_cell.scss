@@ -24,10 +24,14 @@
   justify-content: flex-start;
 
   width: 100%;
-  padding: 0 $Theme-spacing-default;
+  padding: 0 $Theme-spacing-small;
 }
 
 @include media('>=tablet') {
+  .GridCell {
+    padding: 0 $Theme-spacing-default;
+  }
+
   .GridCell.GridCell--alignCenter {
     justify-content: center;
   }
