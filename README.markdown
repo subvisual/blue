@@ -17,7 +17,19 @@ Add the submodule to sprockets (optional):
 ```ruby
 # config.rb
 after_configuration do
-  sprockets.append_path File.join "#{root}", "vendor"
+  %w(javascripts stylesheets images).each do |dir|
+    sprockets.append_path File.join "#{root}", "vendor/blue/#{dir}"
+  end
+end
+```
+
+**Rails**
+
+```ruby
+# config/initliazers/assets.rb
+
+%w(javascripts stylesheets images).each do |dir|
+  Rails.application.config.assets.paths << Rails.root.join('vendor, 'assets, 'blue', dir)
 end
 ```
 
