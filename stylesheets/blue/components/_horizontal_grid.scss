@@ -96,6 +96,17 @@
 
 .HorizontalGrid.HorizontalGrid--withGutters {
   $halfGutterSize: $Theme-spacing-small;
+
+  padding: 0 $halfGutterSize;
+
+  .HorizontalGrid-cell {
+    padding: 0 $halfGutterSize;
+  }
+}
+
+.HorizontalGrid.HorizontalGrid--withLargeGutters {
+  $halfGutterSize: $Theme-spacing-default;
+
   padding: 0 $halfGutterSize;
 
   .HorizontalGrid-cell {
