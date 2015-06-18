@@ -3,6 +3,7 @@
 // Used to change the font properties and style the color
 //
 // default - Tag with default color.
+// .Tag--alt - Same as default, but with an alternative color
 // .Tag--general - Tag with the default color. It's the same has not using a modifier.
 // .Tag--design - Tag with the design color.
 // .Tag--development - Tag with development color.
@@ -25,6 +26,12 @@
 
   text-decoration: none;
   text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+.Tag--alt {
+  color: $Theme-color-poloBlue;
 }
 
 @each $tag, $color in $Theme-tags-color {
