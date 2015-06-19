@@ -30,6 +30,10 @@
   @include font-properties(bodyText, large);
 }
 
+.Text.Text--small {
+  @include font-properties(bodyText, small);
+}
+
 .Text.Text--engagement {
   @include font-properties(heading, base);
   color: $Theme-color-white;
