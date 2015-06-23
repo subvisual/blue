@@ -12,7 +12,10 @@
 // .HorizontalGrid--noTopFrame - Removes the top border
 // .HorizontalGrid--noBottomFrame - Removes the bottom border
 // .HorizontalGrid--withGutters - Applies gutters
+// .HorizontalGrid--withExtraSmallGutters - Applies extra smaller gutters
+// .HorizontalGrid--withLargeGutters - Applies larger gutters
 // .HorizontalGrid--variableWidth - Each cell has the width defined by its content
+// .HorizontalGrid--noStack - Doesn't stack children on mobile resolutions
 //
 // markup:
 // <div class="HorizontalGrid {$modifiers}">
@@ -112,6 +115,16 @@
   }
 }
 
+.HorizontalGrid.HorizontalGrid--withExtraSmallGutters {
+  $halfGutterSize: $Theme-spacing-xSmall;
+
+  padding: 0 $halfGutterSize;
+
+  .HorizontalGrid-cell {
+    padding: 0 $halfGutterSize;
+  }
+}
+
 .HorizontalGrid.HorizontalGrid--withLargeGutters {
   $halfGutterSize: $Theme-spacing-default;
 
@@ -134,7 +147,6 @@
   }
 }
 
-
 .HorizontalGrid-cell {
   flex: 1;
   display: flex;
@@ -143,4 +155,8 @@
   @include media('<=tablet') {
     flex: initial;
   }
+}
+
+.HorizontalGrid.HorizontalGrid--noStack {
+  flex-direction: row;
 }

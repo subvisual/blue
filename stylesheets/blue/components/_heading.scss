@@ -12,7 +12,7 @@
 //
 // markup:
 // <div class="Heading {$modifiers} styleguide-grid-unit">
-//   Lorem Ipsum <span class="Heading-highlight">is simply dummy text</span> of the printing and <span class="Heading-light">typesetting industry</span>.
+//   Lorem Ipsum <span class="Heading-highlight">is simply dummy text</span> of the printing and <span class="Heading-light">typesetting</span> <span class="Heading-dimLight">industry</span>.
 // </div>
 //
 // Styleguide 1.5
@@ -64,4 +64,9 @@
 
 .Heading-light {
   color: $Theme-color-white;
+}
+
+.Heading-dimLight {
+  color: $Theme-color-white;
+  opacity: 0.25;
 }
