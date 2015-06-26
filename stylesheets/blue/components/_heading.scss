@@ -37,15 +37,22 @@
 
 .Heading.Heading--small {
   @include font-properties(heading, small);
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .Heading.Heading--brand {
   @include font-properties(subvisual, base);
+
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 .Heading.Heading--brandLarge {
   @include font-properties(subvisual, large);
+
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
