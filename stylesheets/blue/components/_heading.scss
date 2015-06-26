@@ -37,9 +37,6 @@
 
 .Heading.Heading--small {
   @include font-properties(heading, small);
-
-  letter-spacing: 1px;
-  text-transform: uppercase;
 }
 
 .Heading.Heading--brand {
@@ -58,6 +55,8 @@
 
 .Heading.Heading--brandSmall {
   @include font-properties(subvisual, small);
+
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
