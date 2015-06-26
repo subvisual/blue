@@ -37,17 +37,41 @@ end
 
 Regular git submodule usage. Learn about it [here](https://chrisjean.com/git-submodules-adding-using-removing-and-updating/).
 
-### Navbar Images
+### Images
 
-To load the logo in the navbar you need to setup the following variables before including blue.
+To load the images used by blue you need to setup the following variables before including blue.
 
 ```
 $NavLogo-mobile-colored: image-path('subvisual_logo_no_name.svg');
 $NavLogo-mobile-mono: image-path('subvisual_logo_mono_no_name.svg');
 $NavLogo-desktop-colored: image-path('subvisual_logo_with_name.svg');
 $NavLogo-desktop-mono: image-path('subvisual_logo_mono_with_name.svg');
+$EngagementLink-arrow-url: image-path('link-arrow.svg');
 
 @import 'blue';
 ```
 
 Note the `image-path`, this is an example using sprockets. You must change the value to match your setup.
+
+
+### Middleman
+
+For middleman you need to import the images to sprockets, the following is an example.
+
+```ruby
+after_configuration do
+  if Dir.exist? "blue"
+    sprockets.append_path File.join "#{root}", "blue", "javascripts"
+    sprockets.append_path File.join "#{root}", "blue", "stylesheets"
+    sprockets.append_path File.join "#{root}", "blue", "images", "blue"
+
+    sprockets.import_asset "link-arrow.svg"
+    sprockets.import_asset "subvisual_logo_mono.svg"
+    sprockets.import_asset "subvisual_logo_mono_no_name.svg"
+    sprockets.import_asset "subvisual_logo_mono_with_name.svg"
+    sprockets.import_asset "subvisual_logo_no_name.svg"
+    sprockets.import_asset "subvisual_logo_with_name.svg"
+    sprockets.import_asset "subvisual_separator.svg"
+  end
+end
+```
