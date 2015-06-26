@@ -1,6 +1,6 @@
 // GridCell
 //
-// Center its content and limits it to a threshold
+// Center its content and limits it to a threshold. Content can be specified via the GridCell-content child, or GridCell-smallContent if a smaller width is desired.
 //
 // default - Aligns content to the left
 // .GridCell--alignCenter - Centers the content
@@ -33,17 +33,22 @@
   .GridCell {
     padding: 0 $Theme-spacing-default;
   }
+}
 
-  .GridCell.GridCell--alignCenter {
-    justify-content: center;
-  }
+.GridCell.GridCell--alignCenter {
+  justify-content: center;
+}
 
-  .GridCell.GridCell--alignRight {
-    justify-content: flex-end;
-  }
+.GridCell.GridCell--alignRight {
+  justify-content: flex-end;
 }
 
 .GridCell-content {
+  width: 100%;
+  max-width: 600px;
+}
+
+.GridCell-smallContent {
   width: 100%;
   max-width: 600px;
 }
