@@ -7,10 +7,10 @@
 // default - Full width and borderless
 // .HorizontalGrid--limited - Limits the grid width to 1280px and centers itself
 // .HorizontalGrid--inverted - Swaps the first and last cells places only on desktop
-// .HorizontalGrid--lightFrame - Adds a light colored border
-// .HorizontalGrid--darkFrame - Adds a dark colored border
-// .HorizontalGrid--noTopFrame - Removes the top border
-// .HorizontalGrid--noBottomFrame - Removes the bottom border
+// .HorizontalGrid--lightFrame - Adds a light colored inner border
+// .HorizontalGrid--darkFrame - Adds a dark colored inner border
+// .HorizontalGrid--topFrame - Adds a top border
+// .HorizontalGrid--bottomFrame - Adds a bottom border
 // .HorizontalGrid--withGutters - Applies gutters
 // .HorizontalGrid--withExtraSmallGutters - Applies extra smaller gutters
 // .HorizontalGrid--withLargeGutters - Applies larger gutters
@@ -43,15 +43,12 @@
 $HorizontalGrid-border-width: 1px;
 
 @mixin HorizontalGrid-frameStyles($color) {
-  border-top: $HorizontalGrid-border-width solid $color;
-  border-bottom: $HorizontalGrid-border-width solid $color;
-
-  &.HorizontalGrid--noTopFrame {
-    border-top-width: 0;
+  &.HorizontalGrid--topFrame {
+    border-top: $HorizontalGrid-border-width solid $color;
   }
 
-  &.HorizontalGrid--noBottomFrame {
-    border-bottom-width: 0;
+  &.HorizontalGrid--bottomFrame {
+    border-bottom: $HorizontalGrid-border-width solid $color;
   }
 
   @include media('<=tablet') {
@@ -61,12 +58,8 @@ $HorizontalGrid-border-width: 1px;
   }
 
   @include media('>tablet') {
-    .HorizontalGrid-cell {
+    .HorizontalGrid-cell:not(:first-child) {
       border-left: $HorizontalGrid-border-width solid $color;
-    }
-
-    .HorizontalGrid-cell:last-child {
-      border-right: $HorizontalGrid-border-width solid $color;
     }
   }
 }
