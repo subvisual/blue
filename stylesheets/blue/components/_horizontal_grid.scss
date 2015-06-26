@@ -40,9 +40,11 @@
 @import '../reset';
 @import '../theme_vars';
 
+$HorizontalGrid-border-width: 1px;
+
 @mixin HorizontalGrid-frameStyles($color) {
-  border-top: 2px solid $color;
-  border-bottom: 2px solid $color;
+  border-top: $HorizontalGrid-border-width solid $color;
+  border-bottom: $HorizontalGrid-border-width solid $color;
 
   &.HorizontalGrid--noTopFrame {
     border-top-width: 0;
@@ -54,17 +56,17 @@
 
   @include media('<=tablet') {
     .HorizontalGrid-cell:not(:last-child) {
-      border-bottom: 2px solid $color;
+      border-bottom: $HorizontalGrid-border-width solid $color;
     }
   }
 
   @include media('>tablet') {
     .HorizontalGrid-cell {
-      border-left: 2px solid $color;
+      border-left: $HorizontalGrid-border-width solid $color;
     }
 
     .HorizontalGrid-cell:last-child {
-      border-right: 2px solid $color;
+      border-right: $HorizontalGrid-border-width solid $color;
     }
   }
 }
