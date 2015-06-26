@@ -18,6 +18,7 @@
 @import '../theme_vars';
 
 $EngagementLink-width-icon: 25px;
+$EngagementLink-arrow-url: 'blue/link-arrow.svg' !default;
 
 .EngagementLink {
   @include font-properties(subvisual, small);
@@ -37,8 +38,8 @@ $EngagementLink-width-icon: 25px;
     height: $EngagementLink-width-icon;
     margin-right: $Theme-spacing-small;
 
-    background-image: url('/blue/link-arrow.svg');
-    background-image: image-url('blue/link-arrow.svg');
+    background-image: url(#{$EngagementLink-arrow-url});
+    background-image: image-url(#{$EngagementLink-arrow-url});
     background-repeat: no-repeat;
     background-size: cover;
   }
