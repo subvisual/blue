@@ -1,10 +1,11 @@
 // GridCell
 //
-// Center its content and limits it to a threshold. Content can be specified via the GridCell-content child, or GridCell-smallContent if a smaller width is desired.
+// Center its content and limits it to a threshold
 //
 // default - Aligns content to the left
 // .GridCell--alignCenter - Centers the content
 // .GridCell--alignRight - Aligns content to the right
+// .GridCell--small - Limits the content to a smaller width
 // .GridCell--image - The content limit is adjusted for large images
 // .GridCell--video - The content limit is adjusted for 720px width videos
 //
@@ -43,12 +44,13 @@
   justify-content: flex-end;
 }
 
-.GridCell-content {
-  width: 100%;
-  max-width: 600px;
+.GridCell.GridCell--small {
+  .GridCell-content {
+    max-width: 460px;
+  }
 }
 
-.GridCell-smallContent {
+.GridCell-content {
   width: 100%;
   max-width: 600px;
 }
