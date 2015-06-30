@@ -5,8 +5,8 @@
 // markup:
 // <div class="SitemapTopic">
 //   <h1 class="SitemapTopic-heading">Topic Title</h1>
-//   <ul class="SitemapTopic-links">
-//     <li>Item</li>
+//   <ul>
+//     <li><a href="SitemapTopic-link">Item</a></li>
 //   </ul>
 // </div>
 //
@@ -23,8 +23,10 @@
   text-transform: uppercase;
 }
 
-.SitemapTopic-links {
+.SitemapTopic-link {
   @include font-properties(bodyText, small);
 
-  margin-top: $Theme-spacing-xSmall;
+  color: $Theme-color-poloBlue;
+
+  text-decoration: none;
 }
