@@ -74,8 +74,6 @@
 .Text.Text--engagement {
   @include font-properties(heading, base);
   color: $Theme-color-white;
-
-  font-weight: $Theme-typography-fontWeight-bold;
 }
 
 .Text.Text--brand {
