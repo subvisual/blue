@@ -5,6 +5,7 @@
 // default - Default media component.
 // .Media--noImageSpace - Media without space around the image.
 // .Media--flag - Centers content vertically
+// .Media--responsive - Elements are displayed in a column on smaller resolutions and in a row on larger ones
 //
 // markup:
 // <div class="Media {$modifiers}">
@@ -43,5 +44,11 @@
 .Media.Media--flag {
   .Media-content {
     justify-content: center;
+  }
+}
+
+.Media.Media--responsive {
+  @include media('<tablet') {
+    flex-direction: column;
   }
 }
