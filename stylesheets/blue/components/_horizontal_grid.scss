@@ -184,7 +184,7 @@ $HorizontalGrid-border-width: 1px;
   flex-direction: column;
 
   @include media('<=tablet') {
-    flex: initial;
+    flex-grow: 0;
   }
 }
 
