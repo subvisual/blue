@@ -243,7 +243,7 @@ $Nav-item-color-hover: $Theme-color-yellowOrange;
   }
 
   .Nav-items {
-    max-height: $Theme-nav-height-desktop;
+    height: $Theme-nav-height-desktop;
   }
 
   .Nav-item:not(:first-child) {
