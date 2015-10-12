@@ -1,6 +1,6 @@
-//= require ./blue/_scroll.es6
-//= require ./blue/_scroll_state.es6
-//= require ./blue/_nav_logo.es6
-//= require ./blue/_nav_visibility.es6
-//= require ./blue/_nav.es6
+//= require ./blue/_scroll
+//= require ./blue/_scroll_state
+//= require ./blue/_nav_logo
+//= require ./blue/_nav_visibility
+//= require ./blue/_nav
 //= require ./blue/_nav_state
