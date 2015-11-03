@@ -9,7 +9,14 @@ var handleError = function(err) {
 };
 
 gulp.task('scripts', function() {
-  return gulp.src('javascripts/blue/**')
+  return gulp.src([
+      'javascripts/blue/_scroll.es6',
+      'javascripts/blue/_scroll_state.es6',
+      'javascripts/blue/_nav_logo.es6',
+      'javascripts/blue/_nav_visibility.es6',
+      'javascripts/blue/_nav.es6',
+      'javascripts/blue/_nav_state.js'
+    ])
     .pipe($.debug({title: 'javascript:'}))
     .pipe($.sourcemaps.init())
     .pipe($.babel())
