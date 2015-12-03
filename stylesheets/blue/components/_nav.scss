@@ -38,7 +38,7 @@
 @import '../reset';
 @import '../theme_vars';
 
-$Nav-item-color-hover: $Theme-color-yellowOrange;
+$Nav-item-color-hover: $SW-color-lightsaber-red;
 
 .Nav {
   z-index: 1;
@@ -165,10 +165,6 @@ $Nav-item-color-hover: $Theme-color-yellowOrange;
   &:hover,
   &.is-selected {
     border-bottom: 5px solid $Nav-item-color-hover;
-
-    .Nav-link {
-      color: $Nav-item-color-hover;
-    }
   }
 
   @include media('>desktop') {
@@ -189,15 +185,6 @@ $Nav-item-color-hover: $Theme-color-yellowOrange;
 
   .Nav-item:not(.is-selected) {
     opacity: 0.6;
-  }
-
-  .Nav-item:hover,
-  .Nav-item.is-selected {
-    border-bottom-color: $Theme-color-white;
-
-    .Nav-link {
-      color: $Theme-color-white;
-    }
   }
 }
 
