@@ -24,6 +24,9 @@
 //     <li class="Nav-item is-selected">
 //       <a class="Nav-link" href="#">Company</a>
 //     </li>
+//     <li class="Nav-itemNoUnderline">
+//       <a class="Nav-link" href="#">Apprenticeship</a>
+//     </li>
 //   </ul>
 // </nav>
 //
@@ -170,6 +173,17 @@ $Nav-item-color-hover: $Theme-color-yellowOrange;
       color: $Nav-item-color-hover;
     }
   }
+
+  @include media('>desktop') {
+    margin-left: $Theme-spacing-default;
+  }
+}
+
+.Nav-itemNoUnderline {
+  display: flex;
+  align-items: center;
+
+  margin-left: $Theme-spacing-small;
 
   @include media('>desktop') {
     margin-left: $Theme-spacing-default;
