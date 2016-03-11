@@ -223,7 +223,7 @@ $Nav-item-color-hover: $Theme-color-yellowOrange;
   margin-left: -$Theme-spacing-small;
 }
 
-@include media('>smallDesktop') {
+@include media('>900px') {
   .Nav {
     height: $Theme-nav-height-desktop;
   }
@@ -266,7 +266,7 @@ $Nav-item-color-hover: $Theme-color-yellowOrange;
   }
 }
 
-@include media('<=smallDesktop') {
+@include media('<=900px') {
   .Nav {
     padding: 0 $Theme-spacing-small;
   }
