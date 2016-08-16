@@ -9,6 +9,9 @@
     "url": "https://github.com/subvisual/blue/issues"
   },
   "homepage": "https://github.com/subvisual/blue#readme",
+  "dependencies": {
+    "bower": "^1.7.9"
+  },
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",

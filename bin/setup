@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+# Install Node modules
+npm install
+
+# Install Bower components
+$(npm bin)/bower install
