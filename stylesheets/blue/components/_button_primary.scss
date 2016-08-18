@@ -4,6 +4,7 @@
 //
 // default - Normal state
 // .ButtonPrimary--fullWidth - A button that takes the whole width of its parent
+// .ButtonPrimary--brand - A button that uses the Subvisual's brand color
 // :hover - Hover
 // :active - Active
 // :visited - Visited
@@ -51,4 +52,15 @@ $ButtonPrimary-default-hover: darken($ButtonPrimary-default-background, 10);
 
 .ButtonPrimary.ButtonPrimary--fullWidth {
   width: 100%;
+}
+
+.ButtonPrimary.ButtonPrimary--brand {
+  background-color: $Theme-color-brightTurquoise;
+  border-color: $Theme-color-brightTurquoise;
+
+  &:hover {
+    background-color: darken($Theme-color-brightTurquoise, 10);
+    border-color: darken($Theme-color-brightTurquoise, 10);
+    color: $ButtonPrimary-default-color;
+  }
 }
