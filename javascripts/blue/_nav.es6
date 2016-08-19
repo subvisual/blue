@@ -2,19 +2,28 @@ $(function() {
   window.subvisual = window.subvisual || {};
   window.subvisual.nav = window.subvisual.nav || {};
   window.subvisual.nav.bar = (function() {
-    let $element = $('.Nav');
-    let navLogo = window.subvisual.nav.logo;
-    let navVisibility = window.subvisual.nav.visibility;
+    let $element = $('#fixed-nav');
 
     function update(currentScrollTop, lastScrollTop) {
       let scrollState = new ScrollState(currentScrollTop, lastScrollTop);
 
-      navVisibility.update(scrollState, $element);
-      navLogo.updateWithScroll(scrollState, $element);
-    }
+      if (scrollState.isAtTheTop()) {
+        $element.addClass('is-hidden').addClass('is-transparent');
+        return;
+      }
 
-    navLogo.update($element);
-    navVisibility.updateAfterAnimation($element);
+      if (scrollState.hasntScrolledEnough()) {
+        return;
+      }
+
+      let hasPassedTheElement = scrollState.hasPassedTheElement($element.outerHeight());
+
+      if (scrollState.hasScrolledDown()) {
+        $element.addClass('is-hidden');
+      } else if (hasPassedTheElement) {
+        $element.removeClass('is-hidden is-transparent');
+      }
+    }
 
     return { update };
   })();
