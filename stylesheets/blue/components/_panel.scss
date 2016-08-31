@@ -16,6 +16,8 @@
 @import '../theme_vars';
 
 .Panel {
+  position: relative;
+
   display: flex;
   flex-direction: column;
 
