@@ -1,16 +1,3 @@
-// NavLogo
-//
-// Logo element for Nav.<br>
-// Adapts for mobile and desktop version.
-//
-// default - Colored Subvisual Logo.
-// .NavLogo--mono - Monochromatic version of the logo.
-//
-// markup:
-// <div class="NavLogo {$modifiers}"></div>
-//
-// Styleguide 1.17
-
 .NavLogo {
   .NavLogo-svgColor {
     display: block;

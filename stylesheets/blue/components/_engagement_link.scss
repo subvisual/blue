@@ -1,20 +1,3 @@
-// EngagementLink
-//
-// Links that stand out and usually link to other parts of our site we wish the
-// users to see.<br>
-// It has an icon to better achieve its goal.
-//
-// default - Icon on the left
-// .EngagementLink--iconRight - Icon on the right
-// .EngagementLink--light - The same element but to be used with dark backgrounds
-// .EngagementLink--customIcon - Accepts a different icon other than the default
-// .EngagementLink--cerulean - Using the cerulean color
-//
-// markup:
-// <a href="/link" class="EngagementLink {$modifiers}">Learn more</a>
-//
-// Styleguide 1.9
-
 @import '../reset';
 @import '../theme_vars';
 

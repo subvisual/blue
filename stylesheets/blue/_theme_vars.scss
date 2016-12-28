@@ -7,28 +7,6 @@ $breakpoints: (
   'desktop': 1024px
 );
 
-// Colors
-//
-// This section describes the brand colors
-//
-// $Theme-color-brightTurquoise - Main palette
-// $Theme-color-horizon - Main palette
-// $Theme-color-limedSpruce - Main palette
-// $Theme-color-polar - Main palette
-// $Theme-color-poloBlue - Main palette
-// $Theme-color-white - Main palette
-// $Theme-color-yellowOrange - Main palette
-// $Theme-color-caribbeanGreen - Blog related
-// $Theme-color-cerulean - Blog related
-// $Theme-color-ming - Blog related
-// $Theme-color-tulipTree - Blog related
-// $Theme-color-concrete - Homepage related
-//
-// markup:
-// <div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
-//
-// Styleguide 2
-
 // Brand Colors
 $Theme-color-brightTurquoise: #0dc0f2;
 $Theme-color-caribbeanGreen: #00c2b6;
@@ -44,7 +22,6 @@ $Theme-color-yellowOrange: #fab23c;
 $Theme-color-silverChalice: #999;
 $Theme-color-concrete: #f2f2f2;
 
-// styleguide:ignore:start
 // Color Usage
 $Theme-palette-text-body-default: $Theme-color-limedSpruce !default;
 
@@ -78,25 +55,6 @@ $Theme-typography-fontWeight-regular: 400;
 // Components variables
 $Theme-nav-height-desktop: 80px;
 $Theme-nav-height-mobile: 60px;
-// styleguide:ignore:end
-
-// Theme mixins
-//
-// Theme variables, functions and mixins only.
-// No rule definitions in here.
-//
-// Styleguide 3
-
-// font-properties()
-//
-// Applies the requested **font-family**, **font-size** and **line-height** properties.<br>
-// Applies any exisiting media query rules as well.
-//
-// $family - Defines the font-family to be fetched
-// $size - Defines the size of the font to be fetched
-// $font-sizes - (Optional) Defines an alternative map of font sizes to use
-//
-// Styleguide 3.1
 
 $Theme-font-families: (
   subvisual: ('futura-pt', sans-serif),
@@ -241,19 +199,7 @@ $Theme-font-sizes: (
   }
 }
 
-// background-image()
-//
-// Applies a background-image
-// Also, it applies a temporary workaround for having these assets available to the styleguide, which cannot exist with sprockets helpers right now
-//
-// $imagePath - The path for the image
-//
-// Styleguide 3.2
-
 @mixin background-image($imagePath) {
-  // FIXME: temporary workaround for having these assets available to the styleguide;
-  // TODO: find a way of being able to keep using Sprocket's helpers
-  background-image: url("/#{$imagePath}");
   background-image: image-url($imagePath);
 }
 

@@ -1,21 +1,3 @@
-// Tag
-//
-// Used to change the font properties and style the color
-//
-// default - Tag with default color.
-// .Tag--alt - Same as default, but with an alternative color
-// .Tag--general - Tag with the default color. It's the same has not using a modifier.
-// .Tag--design - Tag with the design color.
-// .Tag--development - Tag with development color.
-// .Tag--community - Tag with the community color.
-//
-// markup:
-// <div class="Tag {$modifiers}">
-//   Lorem, Ipsum
-// </div>
-//
-// Styleguide 1.16
-
 $Tag-color: map-get($Theme-tags-color, general);
 
 .Tag {

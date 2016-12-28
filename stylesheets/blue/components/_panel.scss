@@ -1,17 +1,3 @@
-// Panel
-//
-// Full width container with a unique background
-//
-// default - Default panel
-// .Panel--alternative - Alternate panel
-// .Panel--action - A panel with a CTA
-// .Panel--standout - A panel whose color stands out (I think...)
-//
-// markup:
-// <div class="Panel {$modifiers}">The content defines the panel's height</div>
-//
-// Styleguide 1.8
-
 @import '../reset';
 @import '../theme_vars';
 

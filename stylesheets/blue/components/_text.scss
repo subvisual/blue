@@ -1,30 +1,3 @@
-// Text
-//
-// Styles body text's font and color properties.
-//
-// default - Most commonly used text
-// .Text--extraSmall - Text with an extra small font size
-// .Text--small - Text with a small font size
-// .Text--large - Text with a large font size
-// .Text--extraLarge - Text with an extra large font size
-// .Text--light - Text with a light color
-// .Text--highlight - Text with the highlight color
-// .Text--dark - Text with a dark color
-// .Text--blog - Text with the blog's body text color
-// .Text--dimLight - Text with a dim light color
-// .Text--caption - Text to be used as a caption for images
-// .Text--strong - Text with a strong emphasis
-// .Text--italic - Text with italics
-// .Text--brand - Subvisual font and small font size
-// .Text--engagement - Text to engage with the end-user
-//
-// markup:
-// <div class="Text {$modifiers} styleguide-grid-unit">
-//   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-// </div>
-//
-// Styleguide 1.4
-
 @import '../reset';
 @import '../theme_vars';
 

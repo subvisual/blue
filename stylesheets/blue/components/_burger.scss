@@ -1,20 +1,3 @@
-// Burger
-//
-// A burger icon that transform into a close icon.
-//
-// default - Burger icon.
-// Burger--light - White burger icon.
-// .is-open - Close icon.
-//
-// markup:
-// <div class="Burger {$modifiers}">
-//   <span class="Burger-line"></span>
-//   <span class="Burger-line"></span>
-//   <span class="Burger-line"></span>
-// </div>
-//
-// Styleguide 1.18
-
 .Burger {
   position: relative;
 
