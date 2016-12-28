@@ -8,6 +8,7 @@
 // .EngagementLink--iconRight - Icon on the right
 // .EngagementLink--light - The same element but to be used with dark backgrounds
 // .EngagementLink--customIcon - Accepts a different icon other than the default
+// .EngagementLink--cerulean - Using the cerulean color
 //
 // markup:
 // <a href="/link" class="EngagementLink {$modifiers}">Learn more</a>
@@ -20,6 +21,7 @@
 $EngagementLink-width-icon: 25px;
 $EngagementLink-arrow: 'blue/link-arrow.svg' !default;
 $EngagementLink-arrow-white: 'blue/link-arrow-white.svg' !default;
+$EngagementLink-arrow-cerulean: 'blue/link-arrow-cerulean.svg' !default;
 
 .EngagementLink {
   @include font-properties(subvisual, small);
@@ -57,6 +59,15 @@ $EngagementLink-arrow-white: 'blue/link-arrow-white.svg' !default;
 
     margin-right: 0;
     margin-left: $Theme-spacing-small;
+  }
+}
+
+.EngagementLink.EngagementLink--cerulean {
+  color: $Theme-color-cerulean;
+
+
+  &:before {
+    @include background-image($EngagementLink-arrow-cerulean);
   }
 }
 
