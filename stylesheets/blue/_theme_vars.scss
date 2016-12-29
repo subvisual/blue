@@ -16,16 +16,14 @@ $Theme-color-horizon: #266484;
 $Theme-color-limedSpruce: #2f3d45;
 $Theme-color-ming: #3b6e87;
 $Theme-color-polar: #ebf5fa;
-$Theme-color-poloBlue: #6792a8;
 $Theme-color-tulipTree: #efaa37;
 $Theme-color-white: #fff;
 $Theme-color-yellowOrange: #fab23c;
-$Theme-color-silverChalice: #999;
-$Theme-color-concrete: #f2f2f2;
 $Theme-color-gunMetal: #41505b;
+$Theme-color-blueyGrey: #849aaa;
 
 // Color Usage
-$Theme-palette-text-body-default: $Theme-color-gunMetal !default;
+$Theme-palette-text-body-default: $Theme-color-blueyGrey !default;
 
 // Spacing
 $Theme-spacing-default: 40px;
@@ -191,11 +189,7 @@ $Theme-font-sizes: (
 
   @include font-properties-on-resolution($family, $size, mobile, $font-sizes);
 
-  font-family: nth($family-list, length($family-list));
-
-  @at-root.wf-active & {
-    font-family: nth($family-list, 1);
-  }
+  font-family: nth($family-list, 1), nth($family-list, 2);
 
   @include media('>=tablet') {
     @include font-properties-on-resolution($family, $size, desktop, $font-sizes);

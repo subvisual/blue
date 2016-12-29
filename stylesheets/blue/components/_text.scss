@@ -62,10 +62,6 @@
   @include font-properties(subvisual, base);
 }
 
-.Text.Text--caption {
-  color: $Theme-color-silverChalice;
-}
-
 .Text.Text--blog {
   color: $Theme-color-limedSpruce;
 }

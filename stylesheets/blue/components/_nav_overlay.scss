@@ -26,7 +26,7 @@ $NavOverlay-item-space: $Theme-spacing-default;
 
 .NavOverlay-link {
   @include font-properties(subvisual, small);
-  color: $Theme-color-poloBlue;
+  color: $Theme-color-blueyGrey;
 
   font-weight: $Theme-typography-fontWeight-bold;
   text-decoration: none;

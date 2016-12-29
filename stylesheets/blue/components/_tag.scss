@@ -13,7 +13,7 @@ $Tag-color: map-get($Theme-tags-color, general);
 }
 
 .Tag--alt {
-  color: $Theme-color-poloBlue;
+  color: $Theme-color-blueyGrey;
 }
 
 @each $tag, $color in $Theme-tags-color {
