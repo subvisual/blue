@@ -1,10 +1,6 @@
 @import '../reset';
 @import '../theme_vars';
 
-$ButtonSecondary-default-background: transparent;
-$ButtonSecondary-default-color: $Theme-color-yellowOrange;
-$ButtonSecondary-default-hover: $Theme-color-white;
-
 .ButtonSecondary {
   @include font-properties(subvisual, small);
   display: inline-flex;
@@ -14,10 +10,10 @@ $ButtonSecondary-default-hover: $Theme-color-white;
   max-width: 325px;
   padding: $Theme-spacing-xSmall $Theme-spacing-small;
 
-  background-color: $ButtonSecondary-default-background;
-  border: 2px solid $ButtonSecondary-default-color;
-  border-radius: 8px;
-  color: $ButtonSecondary-default-color;
+  background-color: transparent;
+  border: 2px solid $Theme-color-cerulean;
+
+  color: $Theme-color-cerulean;
   cursor: pointer;
 
   font-weight: $Theme-typography-fontWeight-bold;
@@ -27,9 +23,10 @@ $ButtonSecondary-default-hover: $Theme-color-white;
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    background-color: $ButtonSecondary-default-color;
-    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
-    color: $ButtonSecondary-default-hover;
+    background-color: $Theme-color-cerulean;
+    border-color: transparent;
+    box-shadow: 0 10px 20px 0 rgba($Theme-color-cerulean, 0.25);
+    color: $Theme-color-white;
   }
 }
 

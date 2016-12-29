@@ -14,10 +14,9 @@ $ButtonPrimary-default-hover: darken($ButtonPrimary-default-background, 10);
   max-width: 325px;
   padding: $Theme-spacing-xSmall $Theme-spacing-small;
 
-  background-color: $ButtonPrimary-default-background;
-  border: 2px solid $ButtonPrimary-default-background;
-  border-radius: 8px;
-  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(to bottom, $Theme-color-tiffanyBlue, $Theme-color-cerulean);
+  border: 0;
+  box-shadow: 0 10px 20px 0 rgba($Theme-color-cerulean, 0.25);
   color: $ButtonPrimary-default-color;
   cursor: pointer;
 
@@ -26,25 +25,8 @@ $ButtonPrimary-default-hover: darken($ButtonPrimary-default-background, 10);
   text-transform: uppercase;
 
   transition: all 0.3s ease-in-out;
-
-  &:hover {
-    background-color: $ButtonPrimary-default-hover;
-    border-color: $ButtonPrimary-default-hover;
-    color: $ButtonPrimary-default-color;
-  }
 }
 
 .ButtonPrimary.ButtonPrimary--fullWidth {
   width: 100%;
-}
-
-.ButtonPrimary.ButtonPrimary--brand {
-  background-color: $Theme-color-brightTurquoise;
-  border-color: $Theme-color-brightTurquoise;
-
-  &:hover {
-    background-color: darken($Theme-color-brightTurquoise, 10);
-    border-color: darken($Theme-color-brightTurquoise, 10);
-    color: $ButtonPrimary-default-color;
-  }
 }
