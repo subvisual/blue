@@ -4,6 +4,8 @@
 $Nav-item-color-hover: $Theme-color-yellowOrange;
 
 .Nav {
+  @include responsive-window-margin;
+
   z-index: 1;
 
   display: flex;
@@ -11,7 +13,6 @@ $Nav-item-color-hover: $Theme-color-yellowOrange;
 
   width: 100%;
   height: $Theme-nav-height-mobile;
-  padding: 0 $Theme-spacing-default;
 
   background: transparent;
 
@@ -183,7 +184,7 @@ $Nav-item-color-hover: $Theme-color-yellowOrange;
   margin-left: -$Theme-spacing-small;
 }
 
-@include media('>900px') {
+@include media('>desktop') {
   .Nav {
     height: $Theme-nav-height-desktop;
   }
@@ -226,11 +227,7 @@ $Nav-item-color-hover: $Theme-color-yellowOrange;
   }
 }
 
-@include media('<=900px') {
-  .Nav {
-    padding: 0 $Theme-spacing-small;
-  }
-
+@include media('<=desktop') {
   .Nav.is-open {
     position: fixed;
     top: 0;

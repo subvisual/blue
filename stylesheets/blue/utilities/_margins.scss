@@ -123,3 +123,13 @@
     margin-bottom: $Theme-nav-height-desktop;
   }
 }
+
+@mixin responsive-window-margin {
+  padding-right: $Theme-spacing-small;
+  padding-left: $Theme-spacing-small;
+
+  @include media('>=desktop') {
+    padding-right: $Theme-spacing-default;
+    padding-left: $Theme-spacing-default;
+  }
+}
