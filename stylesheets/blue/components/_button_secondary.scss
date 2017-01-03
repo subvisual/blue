@@ -33,3 +33,15 @@
 .ButtonSecondary.ButtonSecondary--fullWidth {
   width: 100%;
 }
+
+.ButtonSecondary.ButtonSecondary--white {
+  border-color: $Theme-color-white;
+
+  color: $Theme-color-white;
+
+  &:hover {
+    background-color: $Theme-color-white;
+    box-shadow: 0 10px 20px 0 rgba($Theme-color-white, 0.25);
+    color: rgba($Theme-color-limedSpruce, .8);
+  }
+}
