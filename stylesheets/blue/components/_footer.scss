@@ -16,6 +16,7 @@
 }
 
 .Footer-credits {
+  flex-shrink: 1;
   align-items: center;
 
   background-color: $Theme-color-limedSpruce;
