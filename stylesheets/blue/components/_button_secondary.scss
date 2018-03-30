@@ -45,3 +45,15 @@
     color: rgba($Theme-color-limedSpruce, .8);
   }
 }
+
+.ButtonSecondary.ButtonSecondary--mirrorconf {
+  border-color: $mirrorconf-Theme-color-orange;
+
+  color: $mirrorconf-Theme-color-orange;
+
+  &:hover {
+    background-color: $mirrorconf-Theme-color-orange;
+    color: $mirrorconf-Theme-color-white;
+    box-shadow: 0 10px 20px 0 rgba($mirrorconf-Theme-color-orange, 0.25);
+  }
+}
